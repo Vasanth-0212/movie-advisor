@@ -73,7 +73,7 @@ const SearchBar = () => {
                 setMovies([]); // Reset movies in case of error
             }
         } catch (error) {
-            setError("An error occurred while fetching movies.");
+            setError("An error occurred while fetching movies."+error);
             setMovies([]); // Reset movies in case of error
         }
     }
