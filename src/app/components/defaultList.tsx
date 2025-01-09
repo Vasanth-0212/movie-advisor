@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import useStore from "../lib/useStockStore";
-import Image from "next/image";
 
 // Define Movie interface
 interface Movie {
@@ -44,7 +43,7 @@ const DefaultList: React.FC<MovieList> = ({ movies }) => {
             <div className="p-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {movies.map((movie) => (
                     <div key={movie.id} className="bg-white shadow-2xl rounded-lg overflow-hidden">
-                        <Image 
+                        <img 
                             src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} 
                             alt={movie.title} 
                             className="w-full h-[600px] object-cover" 
